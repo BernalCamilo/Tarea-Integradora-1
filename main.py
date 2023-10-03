@@ -2,11 +2,17 @@ from regex import regular_expressions
 from automata import automata as non_finite_automata
 from story_elements.transitions import nfa_transitions as nfa_t
 from story_elements import story as stry
+from story_elements import event_manager
+
 
 
 
 
 class JuegoHistoriaInteractiva:
+
+    def __init__(self):
+        user_name = ""
+        self.events = event_manager.events
 
     
 
@@ -21,6 +27,10 @@ class JuegoHistoriaInteractiva:
 
         print(history[0])
         while current_position < len(nfa_transitions):
+            
+            #Validate special events
+            self.validate_events(current_position)
+
             transitions = nfa_transitions[current_position]
             if not transitions:
                 if (nfa.accepts(ans)):
@@ -49,22 +59,54 @@ class JuegoHistoriaInteractiva:
             else:
                 print("Entrada inválida. Por favor, elija un número válido.")
     
-    def __init__(self):
-        self.nombre_usuario = None
 
-    def welcome(self):
-        print("¡Bienvenido a la Historia Interactiva!")
-        self.nombre_usuario = input("Por favor, ingresa tu nombre: ")
+
+    
+        
 
     def startGame(self):
-        self.welcome()
-        print(f"Comencemos, {self.nombre_usuario}.\n")
+        print("¡Bienvenido a la Historia Interactiva!")
+        self.user_name = input("Por favor, ingresa tu nombre: ")
+
+        print(f"Comencemos, {self.user_name}.\n")
         self.start_story()
         
     def playAgain(self):
         respuesta = input("¿Deseas jugar nuevamente? (Sí/No): ")
         return respuesta.lower() == 'si'
     
+    def validate_events(self,event_id):
+        strange_event = self.events.get_event(event_id)
+
+        consequence = []
+
+
+        if strange_event is not None:
+            actual_state = "beginning"
+            consequence.append("beginning")
+            while actual_state != "end":
+                interaction = strange_event[actual_state]
+
+                for i, option in enumerate(interaction["options"], start=1):
+                    print(f"{i}: {option['text']}")
+                
+                user_choice = input("Elige una opción (ingresa el número correspondiente): ")
+
+                try:
+                    user_choice = int(user_choice)
+                    if 1 <= user_choice <= len(interaction["options"]):
+
+                        #Add consequence
+                        consequence.append(interaction["options"][user_choice-1]["text"].lower().replace(" ", ""))
+
+
+                        next_interaction = interaction["options"][user_choice - 1]["next"]
+                        actual_state = next_interaction
+                    else:
+                        print("Elección no válida. Por favor, ingresa un número válido.")
+                except ValueError:
+                    print("Por favor, ingresa un número válido.")
+
     
 
 
