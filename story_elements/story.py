@@ -1,100 +1,97 @@
 story = []
 #0
-story.append("Llegaste cansad@ del trabajo, y solo quieres descansar, prendes la televisión y ves que están presentando algo sobre zombies, ¿qué haces?")
+story.append(f"---- llegó cansado del trabajo y solo quiere descansar. Prende la televisión y ve que están presentando algo sobre zombies, ¿qué hace?")
 #1
-story.append("Empiezas a llamar a todos tus conocidos para verificar si lo que esta pasando es real ")
+story.append(f"---- empieza a llamar a todos sus conocidos para verificar si lo que está pasando es real.")
 #2
-story.append("Te das cuenta que lo que esta pasando es real por lo que vas al supermercado a tomar proviciones ")
+story.append(f"---- se da cuenta de que lo que está pasando es real, por lo que va al supermercado a tomar provisiones.")
 #3
-story.append("Sales de tu casa con un bate de baisbol ")
+story.append(f"---- sale de su casa con un bate de béisbol.")
 #4
-story.append("En el camino te encuentras un zombie, decides esconderte ")
+story.append(f"En el camino se encuentra un zombie, ---- decide esconderse.")
 #5
-story.append("Hiciste bien, solo alcanzabas a ver un zombie pero detrás de el habia una docena, luego de pasar los zombies, decides entrar al supermercado ")
+story.append(f"---- hizo bien, solo alcanzaba a ver un zombie, pero detrás de él había una docena. Luego de pasar los zombies, decide entrar al supermercado.")
 #6
-story.append("Adentro se encuentra solo un zombie, por lo que intentas matarlo para poder tener proviciones ")
+story.append(f"Adentro se encuentra solo un zombie, por lo que ---- intenta matarlo para poder tener provisiones.")
 #7
-story.append("Lo lograste matar, mientras veías alimentos para llevarte a casa, encontraste una radio ")
+story.append(f"---- logra matarlo, mientras ve alimentos para llevar a casa, encuentra una radio.")
 #8
-story.append("Empiezas a escuchar a un grupo hablar por la radio, asi que decides pedir ayuda  ")
+story.append(f"---- empieza a escuchar a un grupo hablar por la radio, así que decide pedir ayuda.")
 #9
-story.append("El grupo escucho tu ayuda asi que fueron a rescatarte, ahora haces parte de un grupo TE SALVASTE ")
+story.append(f"El grupo escucha la ayuda de ----, así que van a rescatarlo. Ahora ---- hace parte de un grupo. SE SALVÓ.")
 #10
-story.append("Empiezas a escuchar a un grupo hablar por la radio, pero decides ignorarlos porque podria ser una trampa  ")
+story.append(f"---- empieza a escuchar a un grupo hablar por la radio, pero decide ignorarlos porque podría ser una trampa.")
 #11
-story.append("Los zombies que estaban en la zona eran muchos, por lo que pudieron destruir la puerta y entrar ESTAS MUERTO ")
+story.append(f"Los zombies que estaban en la zona eran muchos, por lo que pudieron destruir la puerta y entrar. ¡---- ESTÁ MUERTO!")
 #12
-story.append("Lo lograste matar, mientras veías alimentos para llevarte a casa, encontraste tu comida favorita ")
+story.append(f"---- logra matar al zombie, mientras ve alimentos para llevar a casa, encuentra su comida favorita.")
 #13
-story.append("Decides abrirla para comer, ya que piensas que puede ser tu ultima comida ")
+story.append(f"---- decide abrirla para comer, ya que piensa que puede ser su última comida.")
 #14
-story.append("Si fue tu ultima comida, al abrir la comida hiciste ruido, alertando a los zombies a tu alrededor ESTAS MUERTO ")
+story.append(f"Si fue su última comida, al abrirla hizo ruido, alertando a los zombies a su alrededor. ¡---- ESTÁ MUERTO!")
 #15
-story.append("Decides guardarla para una ocasión especial")
+story.append(f"---- decide guardarla para una ocasión especial.")
 #16
-story.append("Un grupo de personas pasaron matando zombies justo afuera de donde estas, decides esconderte ")
+story.append(f"Un grupo de personas pasa matando zombies justo afuera de donde está ----, decide esconderse.")
 #17
-story.append("Un grupo de personas pasaron matando zombies justo afuera de donde estas, decides pedir ayuda ")
+story.append(f"Un grupo de personas pasa matando zombies justo afuera de donde está ----, decide pedir ayuda.")
 #18
-story.append("Adentro se encuentra solo un zombie, por lo que decides devolverte a casa ")
+story.append(f"Adentro se encuentra solo un zombie, por lo que ---- decide devolverse a casa.")
 #19
-story.append("Al devolverte a casa te encuentras con que tu vecino necesita ayuda, decides acompañarlo")
+story.append(f"Al devolverse a casa, ---- se encuentra con que su vecino necesita ayuda, decide acompañarlo.")
 #20
-story.append("El tenia comida guardada para mucho tiempo, por lo que te quedas Viviendo con el, TE SALVASTE")
+story.append(f"Su vecino tenía comida guardada para mucho tiempo, por lo que ---- se queda viviendo con él. ¡SE SALVÓ!")
 #21
-story.append("Al devolverte a casa te encuentras con que tu vecino necesita ayuda, decides ignorarlo ")
+story.append(f"Al devolverse a casa, ---- se encuentra con que su vecino necesita ayuda, decide ignorarlo.")
 #22
-story.append("Alcanzaste a regresar  a tu casa, pero te das cuenta que tus proviciones no duraran mas de una semana, MORISTE ")
+story.append(f"Alcanza a regresar a su casa, pero se da cuenta de que sus provisiones no durarán más de una semana. ¡---- ESTÁ MUERTO!")
 #23
-story.append("Hiciste bien, solo alcanzabas a ver un zombie pero detrás de el habia una docena, luego de pasar los zombies, decides devolverte a tu casa ")
+story.append(f"Hizo bien, solo alcanzaba a ver un zombie, pero detrás de él había una docena. Luego de pasar los zombies, decide devolverse a su casa.")
 #24
-story.append("Al volver a casa, decides advertir a todos tus vecinos de lo que esta pasando")
+story.append(f"Al volver a casa, ---- decide advertir a todos sus vecinos de lo que está pasando.")
 #25
-story.append("Logran crear una comunidad exitosa, y autosustentable ")
+story.append("Logran crear una comunidad exitosa y autosustentable.")
 #26
-story.append("Al volver a casa, decides intentar robar a uno de tus vecinos que esta en avanzada edad")
+story.append(f"Al volver a casa, ---- decide intentar robar a uno de sus vecinos que está en avanzada edad.")
 #27
-story.append("No conocías la historia de tu vecino, el era parte de las fuerzas armadas, por lo que apenas entraste te disparo, MORISTE ")
+story.append(f"---- no conocía la historia de su vecino, él era parte de las fuerzas armadas, por lo que apenas entra le disparó. ¡---- ESTÁ MUERTO!")
 #28
-story.append("Logras acabar con el, pero habían muchos mas zombies de donde salio este, sales corriendo ")
+story.append(f"---- logra acabar con él, pero había muchos más zombies de donde salió este, sale corriendo.")
 #29
-story.append("Te perdiste en un túnel subterráneo de la ciudad, jamás lograste salir, MORISTE ")
+story.append(f"---- se pierde en un túnel subterráneo de la ciudad, jamás logra salir. ¡---- ESTÁ MUERTO!")
 #30
-story.append("En el camino te encuentras un zombie, decides atacarlo ")
+story.append(f"En el camino se encuentra un zombie, ---- decide atacarlo.")
 #31
-story.append("Logras acabar con el, pero habían muchos mas zombies de donde salio este, intentas acabar con todos ")
+story.append(f"---- logra acabar con él, pero había muchos más zombies de donde salió este, intenta acabar con todos.")
 #32
-story.append("Decides colgarte para no ser un problema para nadie, MORISTE ")
+story.append(f"---- decide colgarse para no ser un problema para nadie. ¡---- ESTÁ MUERTO!")
 #33
-story.append("Lograste acabsr con todos pero uno de ellos te alcanzo a morder, por lo que decides cortarte la pierna")
+story.append(f"---- logra acabar con todos, pero uno de ellos le alcanza a morder, por lo que ---- decide cortarse la pierna.")
 #34
-story.append("No pudiste detener la hemorragia, ESTAS MUERTO ")
+story.append(f"No pudo detener la hemorragia. ¡---- ESTÁ MUERTO!")
 #35
-story.append("Sales de tu casa con una pistola ")
+story.append(f"---- sale de su casa con una pistola.")
 #36
-story.append("En el camino te encuentras un zombie, decides esconderte ")
+story.append(f"En el camino se encuentra un zombie, ---- decide esconderse.")
 #37
-story.append("Al intentar esconderte te encuentras con grupo, y al ver el arma te disparan primero, ESTAS MUERTO ")
+story.append(f"Al intentar esconderse, ---- se encuentra con un grupo, y al ver el arma le disparan primero. ¡---- ESTÁ MUERTO!")
 #38
-story.append("En el camino te encuentras un zombie, decides atacarlo ")
+story.append(f"En el camino se encuentra un zombie, ---- decide atacarlo.")
 #39
-story.append("Hiciste much ruido, alertaste a los zombies, ESTAS MUERTO ")
+story.append(f"---- hizo mucho ruido, alertó a los zombies. ¡---- ESTÁ MUERTO!")
 #40
-story.append("Te quedas sentado pensando que es una pelicula")
+story.append(f"---- se queda sentado pensando que es una película.")
 #41
-story.append("Decides pedir una pizza por domicilio como cena ")
+story.append(f"---- decide pedir una pizza por domicilio como cena.")
 #42
-story.append("Llego la pizza, abriste la puerta para recibirla, y resulto ser un zombie ESTAS MUERTO  ")
+story.append(f"Llega la pizza, ---- abre la puerta para recibirla, y resulta ser un zombie. ¡---- ESTÁ MUERTO!")
 #43
-story.append("Se te hace raro que la Pelicula siga siendo mas una noticia que entrentenimiento ")
+story.append(f"A ---- le parece raro que la película siga siendo más una noticia que entretenimiento.")
 #44
-story.append("Lo ignoras y empiezas a preparar tu cena, escuchas un ruido afuera ")
+story.append(f"---- lo ignora y empieza a preparar su cena, escucha un ruido afuera.")
 #45
-story.append("Decides tomar precaucion, pero aun asi los zombies te logran atrapar, ESTAS MUERTO   ")
+story.append(f"---- decide tomar precaución, pero aún así los zombies lo logran atrapar. ¡---- ESTÁ MUERTO!")
 #46
-story.append("Ellos fuera matar los zombies, tambien estaban quemando todo para evitar que el virus se propagara, MORISTE QUEMADO ")
+story.append(f"Ellos fuera matan los zombies, también están quemando todo para evitar que el virus se propague. ¡---- MORISTE QUEMADO!")
 #47
-story.append("Ellos escucharon tu llamado y se dieron cuenta que eres una buena persona ya que compartiste tu comida favorita con ellos, TE SALVASTE, AHORA PERTENECES A UN GRUPO ")
-
-
-
+story.append(f"Ellos escucharon el llamado de ---- y se dieron cuenta de que es una buena persona, ya que compartió su comida favorita con ellos. ¡---- SE SALVÓ, AHORA PERTENECE A UN GRUPO!")
