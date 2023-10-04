@@ -1,5 +1,6 @@
 class EventManager:
     def __init__(self):
+        self.achievements = {}
         self.events = {}
 
     def add_event(self, event_id, event_data):
@@ -7,6 +8,12 @@ class EventManager:
 
     def get_event(self, event_id):
         return self.events.get(event_id, None)
+    
+    def add_achievements(self, event_id, description):
+        self.achievements[event_id] = description
+    
+    def get_achievements(self, event_id):
+        return self.achievements.get(event_id, None)
     
 
 
@@ -19,7 +26,7 @@ strange_event = {
         "message": "Te encuentras con un forastero misterioso en medio del apocalipsis zombie.",
         "options": [
             {"text": "Saludar al forastero", "next": "saludo_forastero"},
-            {"text": "Mantener distancia", "next": "rechazar_forastero"}
+            {"text": "Mantener distancia", "next": "rechazo_forastero"}
         ]
     },
     "saludo_forastero": {
@@ -32,33 +39,28 @@ strange_event = {
     "pregunta_amigo_enemigo": {
         "message": "Forastero: No soy un zombie.",
         "options": [
-            {"text": "No te creo", "next": "rechazo_forastero"},
+            {"text": "No te creo", "next": "negar_ayuda"},
             {"text": "Continuar la conversación", "next": "continuar_conversacion"},
         ]
     },
     "rechazo_forastero": {
         "message": "Forastero: (Forastero parece ofendido).",
         "options": [
-            {"text": "Alejarte", "next": "finalizar"},
+            {"text": "Alejarte", "next": "end"},
+            {"text": "Salvar forastero de Zombies", "next": "end"},
         ]
     },
     "pregunta_ayuda": {
         "message": "Forastero: Necesito comida desesperadamente.",
         "options": [
-            {"text": "Dar comida", "next": "dar_comida"},
+            {"text": "Dar comida", "next": "end"},
             {"text": "Negarse a ayudar", "next": "negar_ayuda"},
-        ]
-    },
-    "dar_comida": {
-        "message": "Forastero: Gracias, eres un buen samaritano.",
-        "options": [
-            {"text": "Fin", "next": "end"},
         ]
     },
     "negar_ayuda": {
         "message": "Forastero: (Forastero parece decepcionado).",
         "options": [
-            {"text": "Alejarte", "next": "finalizar"},
+            {"text": "Alejarte", "next": "end"},
         ]
     },
     "continuar_conversacion": {
@@ -74,4 +76,11 @@ strange_event = {
 }
 
 
-events.add_event(35,strange_event)
+strange_event_achievement = {
+    "achievement": "Héroe del Apocalipsi",
+    "description": "Tu valentía y empatía han ayudado a salvar a innumerables supervivientes en este mundo postapocalíptico."
+}
+
+
+events.add_event(4,strange_event)
+events.add_achievements(4,strange_event_achievement)

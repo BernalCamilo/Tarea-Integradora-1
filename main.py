@@ -3,15 +3,18 @@ from automata import automata as non_finite_automata
 from story_elements.transitions import nfa_transitions as nfa_t
 from story_elements import story as stry
 from story_elements import event_manager
+from gic import context_free_grammar
 
 
 
 
 
-class JuegoHistoriaInteractiva:
+
+class Game:
 
     def __init__(self):
-        user_name = ""
+        self.user_name = ""
+        self.achievements =[]
         self.events = event_manager.events
 
     
@@ -27,6 +30,8 @@ class JuegoHistoriaInteractiva:
 
         print(history[0])
         while current_position < len(nfa_transitions):
+
+            print(current_position)
             
             #Validate special events
             self.validate_events(current_position)
@@ -35,6 +40,9 @@ class JuegoHistoriaInteractiva:
             if not transitions:
                 if (nfa.accepts(ans)):
                     print("Felicidades, has sobrevivido")
+                    print("***LOGROS***")
+                    for achievement in self.achievements:
+                        print(f'Logro: {achievement["achievement"]}\nDescripción: {achievement["description"]}')
                 else:
                     print("Lo siento, HAZ MUERTO")
                 break
@@ -82,10 +90,15 @@ class JuegoHistoriaInteractiva:
 
 
         if strange_event is not None:
+            print("***EVENTO ESPECIAL***")
+
             actual_state = "beginning"
             consequence.append("beginning")
             while actual_state != "end":
                 interaction = strange_event[actual_state]
+
+                print(interaction["message"])
+
 
                 for i, option in enumerate(interaction["options"], start=1):
                     print(f"{i}: {option['text']}")
@@ -99,18 +112,21 @@ class JuegoHistoriaInteractiva:
                         #Add consequence
                         consequence.append(interaction["options"][user_choice-1]["text"].lower().replace(" ", ""))
 
-
                         next_interaction = interaction["options"][user_choice - 1]["next"]
                         actual_state = next_interaction
                     else:
                         print("Elección no válida. Por favor, ingresa un número válido.")
                 except ValueError:
                     print("Por favor, ingresa un número válido.")
+        
+
+        if context_free_grammar.validateachievement(consequence):
+            self.achievements.append(self.events.get_achievements(event_id))
 
     
 
 
-game = JuegoHistoriaInteractiva()
+game = Game()
 game.startGame()
 
 
