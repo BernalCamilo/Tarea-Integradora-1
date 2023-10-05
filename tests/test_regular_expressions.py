@@ -7,6 +7,7 @@ class TestRegularExpressions(unittest.TestCase):
         self.assertTrue(regular_expressions.validate_username("Alice"))
         self.assertTrue(regular_expressions.validate_username("Bob"))
         self.assertTrue(regular_expressions.validate_username("JohnDoe"))
+        self.assertTrue(regular_expressions.validate_username("Juan Esteban"))
 
     def test_invalid_username(self):
         self.assertFalse(regular_expressions.validate_username("123"))
