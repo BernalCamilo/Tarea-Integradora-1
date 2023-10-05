@@ -12,9 +12,9 @@
 
 | **Pruebas** | **Nombre de Usuario** | **Resultado Esperado** |
 |-------------|-----------------------|------------------------|
-| test_valid_username | "Alice" | True |
-| test_valid_username | "Bob" | True |
-| test_valid_username | "JohnDoe" | True |
+| test_valid_username | "Juan Perez" | True |
+| test_valid_username | "Maria Smith" | True |
+| test_valid_username | "John Doe" | True |
 | test_invalid_username | "123" | False |
 | test_invalid_username | "user_name" | False |
 | test_invalid_username | "Alice123" | False |
@@ -39,3 +39,27 @@
 | test_valid | ["beginning", "mantenerdistancia", "salvarforasterodezombies"] | True |
 | test_invalid | ["saludaralforastero", "mantenerdistancia", "salvarforasterodezombies"] | False |
 | test_invalid | ["befinning","saludaralforastero", "preguntarsinecesitaayuda", "darcomida"] | False |
+
+
+# **Módulo Autómata Finito No Determinista**
+
+## **Caso de Prueba #003**
+
+| **ID de Caso de Prueba** | 003                                                      |
+|-------------------------|----------------------------------------------------------|
+| **Descripción de la Prueba** | Verificar si un autómata finito no determinista (NFA) acepta o no acepta diversas cadenas de entrada. |
+| **Supuestos y Condiciones Previas** | Se asume que el módulo `non_deterministic_automata` está correctamente implementado y disponible para las pruebas. |
+| **Datos de Prueba** | Se proporcionan diferentes cadenas de entrada para evaluar si el NFA las acepta o no. |
+| **Resultado Esperado** | Se espera que el NFA acepte las cadenas de entrada para las cuales se ha afirmado que se aceptarán (True), y que no acepte las cadenas de entrada para las cuales se ha afirmado que no se aceptarán (False). |
+| **Resultado Real y Condiciones Posteriores** | Los resultados reales de la prueba se compararán con los resultados esperados para determinar si el NFA funciona correctamente. |
+
+| **Pruebas** | **Cadena de Entrada** | **Resultado Esperado** |
+|-------------|-----------------------|------------------------|
+| test_accepts | "001111110" | True |
+| test_accepts | "00111010" | True |
+| test_accepts | "0011010" | True |
+| test_accepts | "0011110000" | True |
+| test_no_accepts | "0" | False |
+| test_no_accepts | "00111111" | False |
+| test_no_accepts | "001111001" | False |
+| test_no_accepts | "00111100001" | False |

@@ -76,3 +76,16 @@ Siga estos pasos para configurar y utilizar el proyecto del generador de histori
        ```
 
 Ahora está listo para utilizar el generador de historias interactivas en Python. Siga las instrucciones proporcionadas por el programa y disfrute de su experiencia de narración de historias interactivas. ¡Diviértase!
+
+
+**Ejecutar las Pruebas:**
+
+Para ejecutar las pruebas del proyecto, utilice el siguiente comando:
+  ```
+  python -m unittest tests/test_implementation.py
+  ```
+Para obtener detalles adicionales sobre la ejecución de las pruebas, puede utilizar el siguiente comando detallado:
+
+  ```
+  python -m unittest -v tests/test_implementation.py
+  ```
