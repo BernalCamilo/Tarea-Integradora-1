@@ -1,4 +1,4 @@
-from regex import regular_expressions
+from regex_expressions import regular_expressions
 from automata import automata as non_finite_automata
 from story_elements.transitions import nfa_transitions as nfa_t
 from story_elements import story as stry

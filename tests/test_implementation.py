@@ -1,5 +1,7 @@
+from regex_expressions import regular_expressions
+from gic import context_free_grammar
+
 import unittest
-from regex import regular_expressions
 
 class TestRegularExpressions(unittest.TestCase):
 
@@ -14,6 +16,9 @@ class TestRegularExpressions(unittest.TestCase):
         self.assertFalse(regular_expressions.validate_username("Alice123"))
         self.assertFalse(regular_expressions.validate_username("Alice_Doe"))
         self.assertFalse(regular_expressions.validate_username("Alice@Doe"))
+
+
+
 
 if __name__ == '__main__':
     unittest.main()

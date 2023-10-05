@@ -14,6 +14,5 @@ cfg = CFG.from_text("""
 
 
 
-
 def validateachievement(consequence):
     return bool(cfg.contains(consequence))
