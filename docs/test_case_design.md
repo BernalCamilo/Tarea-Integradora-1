@@ -15,11 +15,17 @@
 | test_valid_username | "Juan Perez" | True |
 | test_valid_username | "Maria Smith" | True |
 | test_valid_username | "John Doe" | True |
+| test_valid_username | "Juan Duque" | True |
+| test_valid_username | "John" | True |
+| test_valid_username | "Alice Monet" | True |
+
 | test_invalid_username | "123" | False |
 | test_invalid_username | "user_name" | False |
 | test_invalid_username | "Alice123" | False |
 | test_invalid_username | "Alice_Doe" | False |
 | test_invalid_username | "Alice@Doe" | False |
+| test_invalid_username | "Alice 8" | False |
+| test_invalid_username | "Alice@8" | False |
 
 # **Módulo Gramática Libre de Contexto**
 
@@ -37,6 +43,7 @@
 |-------------|-----------------------|------------------------|
 | test_valid | ["beginning", "saludaralforastero", "preguntarsinecesitaayuda", "darcomida"] | True |
 | test_valid | ["beginning", "mantenerdistancia", "salvarforasterodezombies"] | True |
+
 | test_invalid | ["saludaralforastero", "mantenerdistancia", "salvarforasterodezombies"] | False |
 | test_invalid | ["befinning","saludaralforastero", "preguntarsinecesitaayuda", "darcomida"] | False |
 
@@ -59,7 +66,30 @@
 | test_accepts | "00111010" | True |
 | test_accepts | "0011010" | True |
 | test_accepts | "0011110000" | True |
+
 | test_no_accepts | "0" | False |
 | test_no_accepts | "00111111" | False |
 | test_no_accepts | "001111001" | False |
 | test_no_accepts | "00111100001" | False |
+
+# **Módulo Transductor de Estado Finito**
+
+## **Caso de Prueba #004**
+
+| **ID de Caso de Prueba | 004                                                        |
+|------------------------|------------------------------------------------------------|
+| **Descripción de la Prueba** | Verificar si el transductor hace el cambio de nombre o no, recibiendo diversas cadenas de entrada |
+| **Supuestos y Condiciones Previas** | Se asume que el módulo `finite_state_transducer` está correctamente implementado y disponible para las pruebas. |
+| **Datos de Prueba** | Se proporcionan diferentes cadenas de entrada para evaluar si el FST cambia el nombre en la historia. |
+| **Resultado Esperado** | Se espera que el FST cambie el nombre del usuario al iniciar o en la mitad de la historia si las cadenas ingresadas son confirmadas como válidas (True), o se rechaza las cadenas de entrada confirmadas como inválidas (False). |
+| **Resultado Real y Condiciones Posteriores** | Los resultados reales de la prueba se compararán con los resultados esperados para determinar si el FST funciona correctamente. |
+
+| **Pruebas** | **Cadena de Entrada** | **Resultado Esperado** |
+|-------------|-----------------------|------------------------|
+| test_accepts | "Juan Perez" | True |
+| test_accepts | "Juan Duque" | True |
+| test_accepts | "Gabriel" | True |
+
+| test_no_accepts | "Alice_Doe" | False |
+| test_no_accepts | "user_name 123" | False |
+| test_no_accepts | "MarieCurie 9" | False |
