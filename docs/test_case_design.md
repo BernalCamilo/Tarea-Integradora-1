@@ -48,14 +48,6 @@ Aquí tienes la tabla llenada con los casos de prueba proporcionados para la cla
 | test_limit_cases    | ["befinning", "saludaralforastero", "preguntarsinecesitaayuda", "darcomida"] | False                  | Caso límite        |
 | test_interesting_cases | ["beginning", "mantenerdistancia", "salvarforasterodezombies"] | True                   | Caso interesante   |
 
-
-
-
-
-
-
-
-
 # **Módulo Autómata Finito No Determinista**
 
 ## **Caso de Prueba #003**
@@ -78,7 +70,6 @@ Aquí tienes la tabla llenada con los casos de prueba proporcionados para la cla
 | test_limit_cases    | "00111100001" | False                  | Caso límite        |
 | test_interesting_cases | "00111111" | False                  | Caso interesante   |
 | test_interesting_cases | "001111001" | False                  | Caso interesante   |
-
 
 # **Módulo Transductor de Estado Finito**
 
