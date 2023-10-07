@@ -1,8 +1,11 @@
+from regex_expressions import regular_expressions
+
 class Transducer:
     def __init__(self):
         self.name = "prueba"
 
     def transductorMethod(self, username, text):
+        
         from pyformlang.fst import FST
         transducer = FST()
         transducer.add_transitions([('q0','a','q1',['x']),
@@ -55,10 +58,8 @@ class Transducer:
             ('q0','T','q0',['T']),
             ('q0','U','q0',['U']),
             ('q0','V','q0',['V']),
-            ('q0','X','q0',['X']),
             ('q0','Y','q0',['Y']),
             ('q0','Z','q0',['Z']),
-
             ('q0','0','q0',['0']),
 
             ('q0','1','q0',['1']),

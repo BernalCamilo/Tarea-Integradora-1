@@ -11,7 +11,10 @@ from transducers.transducer import Transducer
 trans = Transducer()
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1ffd07d98444a6e1f62fb1c1f151ccacf7a4edb0
 class Game:
     
     user_name = ""
@@ -53,6 +56,7 @@ class Game:
             for idx, next_state in enumerate(transitions):
                 text = f"{idx}: {history[next_state]}"
                 print(trans.transductorMethod(Game.user_name,text))
+                
             print("3: Cambiar nombre de usuario")
             user_choice = input("Elija un número para avanzar (o 'q' para salir): ")
 
@@ -61,8 +65,14 @@ class Game:
                 
             if user_choice.isnumeric():
                 choice_idx = int(user_choice) 
+                
+                checkUsername = False
+                
                 if choice_idx==3:
-                    Game.user_name = input("Por favor, ingresa un nuevo nombre: ")
+                    while checkUsername == False:
+                        Game.user_name = input("Por favor, ingresa un nuevo nombre: ")
+                        if (regular_expressions.validate_username(Game.user_name)):
+                            checkUsername = True
                          
                 elif 0 <= choice_idx < len(transitions):
                     next_state = transitions[choice_idx]
@@ -81,8 +91,13 @@ class Game:
         print("¡Bienvenido a la Historia Interactiva!")
         Game.user_name = input("Por favor, ingresa tu nombre: ")
         
-        print(f"Comencemos, {Game.user_name}.\n")
-        self.start_story()
+        if (regular_expressions.validate_username(Game.user_name)):
+            print(f"Comencemos, {Game.user_name}.\n")
+            self.start_story()
+        else :
+            print("Por favor, ingresa un nombre válido.")
+            self.startGame()
+        
         
     def playAgain(self):
         respuesta = input("¿Deseas jugar nuevamente? (Sí/No): ")
@@ -92,7 +107,6 @@ class Game:
         strange_event = self.events.get_event(event_id)
 
         consequence = []
-
 
         if strange_event is not None:
             print("***EVENTO ESPECIAL***")

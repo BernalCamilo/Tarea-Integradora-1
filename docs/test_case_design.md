@@ -48,14 +48,6 @@ Aquí tienes la tabla llenada con los casos de prueba proporcionados para la cla
 | test_limit_cases    | ["befinning", "saludaralforastero", "preguntarsinecesitaayuda", "darcomida"] | False                  | Caso límite        |
 | test_interesting_cases | ["beginning", "mantenerdistancia", "salvarforasterodezombies"] | True                   | Caso interesante   |
 
-
-
-
-
-
-
-
-
 # **Módulo Autómata Finito No Determinista**
 
 ## **Caso de Prueba #003**
@@ -79,3 +71,24 @@ Aquí tienes la tabla llenada con los casos de prueba proporcionados para la cla
 | test_interesting_cases | "00111111" | False                  | Caso interesante   |
 | test_interesting_cases | "001111001" | False                  | Caso interesante   |
 
+# **Módulo Transductor de Estado Finito**
+
+## **Caso de Prueba #004**
+
+| **ID de Caso de Prueba | 004                                                        |
+|------------------------|------------------------------------------------------------|
+| **Descripción de la Prueba** | Verificar si el transductor hace el cambio de nombre o no, recibiendo diversas cadenas de entrada |
+| **Supuestos y Condiciones Previas** | Se asume que el módulo `finite_state_transducer` está correctamente implementado y disponible para las pruebas. |
+| **Datos de Prueba** | Se proporcionan diferentes cadenas de entrada para evaluar si el FST cambia el nombre en la historia. |
+| **Resultado Esperado** | Se espera que el FST cambie el nombre del usuario al iniciar o en la mitad de la historia si las cadenas ingresadas son confirmadas como válidas (True), o se rechaza las cadenas de entrada confirmadas como inválidas (False). |
+| **Resultado Real y Condiciones Posteriores** | Los resultados reales de la prueba se compararán con los resultados esperados para determinar si el FST funciona correctamente. |
+
+| **Pruebas** | **Cadena de Entrada** | **Resultado Esperado** |
+|-------------|-----------------------|------------------------|
+| test_accepts | "Juan Perez" | True |
+| test_accepts | "Juan Duque" | True |
+| test_accepts | "Gabriel" | True |
+
+| test_no_accepts | "Alice_Doe" | False |
+| test_no_accepts | "user_name 123" | False |
+| test_no_accepts | "MarieCurie 9" | False |

@@ -1,6 +1,5 @@
 import re 
 
-
 def validate_username(userName):
     regular_expresion = r"^[a-zA-Z]+ [a-zA-Z]+$"
     regular_expresion2 = r"^[a-zA-Z]+$"
