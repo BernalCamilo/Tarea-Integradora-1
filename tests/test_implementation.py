@@ -81,18 +81,41 @@ class TestFiniteStateTransducer(unittest.TestCase):
     def test_translates_accept(self):
         
         trans = Transducer()
+
+        username = "Juan Perez"
+        text_to_translate = "En el camino se encuentra un zombie, ---- decide esconderse."
+        valid_transduction = "En el camino se encuentra un zombie, Juan Perez decide esconderse."
+
+        self.assertEqual(trans.transductorMethod(username,text_to_translate), valid_transduction)
+
+        username = "C"
+        valid_transduction = "En el camino se encuentra un zombie, C decide esconderse."
+
+        self.assertEqual(trans.transductorMethod(username, text_to_translate), valid_transduction)
+
+        username = "Maria Rodriguez"
+        valid_transduction = "En el camino se encuentra un zombie, Maria Rodriguez decide esconderse."
+
+        self.assertEqual(trans.transductorMethod(username, text_to_translate), valid_transduction)
+
+   
         
-        self.assertTrue(trans.transductorMethod(regular_expressions.validate_username("Juan Perez"), "En el camino se encuentra un zombie, ---- decide esconderse."))
-        self.assertTrue(trans.transductorMethod(regular_expressions.validate_username("Juan Duque"), "---- sale de su casa con un bate de beisbol."))
-        self.assertTrue(trans.transductorMethod(regular_expressions.validate_username("Gabriel"), "---- empieza a escuchar a un grupo hablar por la radio, pero decide ignorarlos porque podria ser una trampa."))
         
     def test_translates_no_accepts(self):
         
         trans = Transducer()
+
+        username = ""
+        text_to_translate = "En el camino se encuentra un zombie, ---- decide esconderse."
+
+        self.assertNotEqual(trans.transductorMethod(username, text_to_translate), text_to_translate)
+
+        username = "Maria Rodriguez"
+        text_to_translate = "En el camino se encuentra un zombie, ---- decide esconderse."
+
+        self.assertNotEqual(trans.transductorMethod(username, text_to_translate), text_to_translate)
         
-        self.assertFalse(trans.transductorMethod(regular_expressions.validate_username("Alice_Doe"), "En el camino se encuentra un zombie, ---- decide esconderse."))
-        self.assertFalse(trans.transductorMethod(regular_expressions.validate_username("user_name 123"), "---- sale de su casa con un bate de beisbol."))
-        self.assertFalse(trans.transductorMethod(regular_expressions.validate_username("MarieCurie 9"), "---- empieza a escuchar a un grupo hablar por la radio, pero decide ignorarlos porque podria ser una trampa."))
+        
 
 
 if __name__ == '__main__':

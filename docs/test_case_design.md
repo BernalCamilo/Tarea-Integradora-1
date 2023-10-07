@@ -83,12 +83,12 @@ Aquí tienes la tabla llenada con los casos de prueba proporcionados para la cla
 | **Resultado Esperado** | Se espera que el FST cambie el nombre del usuario al iniciar o en la mitad de la historia si las cadenas ingresadas son confirmadas como válidas (True), o se rechaza las cadenas de entrada confirmadas como inválidas (False). |
 | **Resultado Real y Condiciones Posteriores** | Los resultados reales de la prueba se compararán con los resultados esperados para determinar si el FST funciona correctamente. |
 
-| **Pruebas** | **Cadena de Entrada** | **Resultado Esperado** |
-|-------------|-----------------------|------------------------|
-| test_accepts | "Juan Perez" | True |
-| test_accepts | "Juan Duque" | True |
-| test_accepts | "Gabriel" | True |
 
-| test_no_accepts | "Alice_Doe" | False |
-| test_no_accepts | "user_name 123" | False |
-| test_no_accepts | "MarieCurie 9" | False |
+| **Pruebas**                          | **Input**           | **Resultado Esperado**                                      | **Tipo de Caso**           |
+|-------------------------------------|---------------------|-------------------------------------------------------------|----------------------------|
+| `test_translates_accept`            | "Juan Perez"        | "En el camino se encuentra un zombie, Juan Perez decide esconderse." | Caso de Aceptación         |
+| `test_translates_accept`                                | "C"                 | "En el camino se encuentra un zombie, C decide esconderse."     | Caso de Aceptación         |
+|  `test_translates_accept`                                  | "Maria Rodriguez"   | "En el camino se encuentra un zombie, Maria Rodriguez decide esconderse." | Caso de Aceptación         |
+| `test_translates_no_accepts`        | ""                  | No igual a "En el camino se encuentra un zombie, ---- decide esconderse." | Caso de No Aceptación      |
+|  `test_translates_accept`                                     | "Maria Rodriguez"   | No igual a "En el camino se encuentra un zombie, ---- decide esconderse." | Caso de No Aceptación      |
+

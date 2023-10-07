@@ -11,10 +11,7 @@ from transducers.transducer import Transducer
 trans = Transducer()
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 1ffd07d98444a6e1f62fb1c1f151ccacf7a4edb0
 class Game:
     
     user_name = ""
