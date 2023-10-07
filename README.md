@@ -89,3 +89,11 @@ Para obtener detalles adicionales sobre la ejecución de las pruebas, puede util
   ```
   python -m unittest -v tests/test_implementation.py
   ```
+ **Implementación con GUI**
+
+ La implementación con GUI ofrece una alternativa visual para aquellos que prefieren una experiencia más amigable desde el punto de vista gráfico. En esta versión, los usuarios pueden interactuar con elementos de la historia a través de una interfaz gráfica intuitiva. Sin embargo, es importante destacar que la implementación con GUI le falta la integración del módulo de logros (GIC), esta implementación esta completa en la UI por consola.
+
+ Para ejecutar las GUI, utilice el siguiente comando:
+  ```
+  python gui.py
+  ```

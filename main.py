@@ -12,7 +12,6 @@ trans = Transducer()
 
 
 
-
 class Game:
     
     user_name = ""
@@ -40,6 +39,7 @@ class Game:
 
             transitions = nfa_transitions[current_position]
             if not transitions:
+                print(ans)
                 if (nfa.accepts(ans)):
                     print("Felicidades, has sobrevivido")
                     print("***LOGROS***")

@@ -92,6 +92,6 @@ story.append("---- lo ignora y empieza a preparar su cena, escucha un ruido afue
 #45
 story.append("---- decide tomar precaucion, pero aun asi los zombies lo logran atrapar. ¡---- ESTA MUERTO!")
 #46
-story.append("Ellos fuera matan los zombies, tambien estan quemando todo para evitar que el virus se propague. ¡---- MORISTE QUEMADO!")
+story.append("Ellos afuera matan los zombies, tambien estan quemando todo para evitar que el virus se propague. ¡---- MORISTE QUEMADO!")
 #47
 story.append("Ellos escucharon el llamado de ---- y se dieron cuenta de que es una buena persona, ya que compartio su comida favorita con ellos. ¡---- SE SALVO, AHORA PERTENECE A UN GRUPO!")
